@@ -28,7 +28,7 @@ from datetime import datetime
 
 
 '''
-alchemyEngine = create_engine("postgresql+psycopg2://postgres:Renfe2022@172.19.28.174:5433/SalesSystem", 
+alchemyEngine = create_engine(os.getenv("CONNECTION_STRING"), 
                                 pool_recycle=-1,  
                               pool_pre_ping=True,  
                               pool_size = 1,
